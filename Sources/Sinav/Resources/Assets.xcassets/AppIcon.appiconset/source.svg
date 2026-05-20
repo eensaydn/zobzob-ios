@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#FFC79A"/>
+      <stop offset="45%"  stop-color="#FF9A5A"/>
+      <stop offset="100%" stop-color="#F47D38"/>
+    </linearGradient>
+    <radialGradient id="shine" cx="0.28" cy="0.22" r="0.7">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cheek" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#FF6B6B" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#FF6B6B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Squircle background -->
+  <rect width="1024" height="1024" rx="232" fill="url(#bg)"/>
+  <rect width="1024" height="1024" rx="232" fill="url(#shine)"/>
+
+  <!-- Floating sparkles + math symbols -->
+  <g fill="#ffffff" opacity="0.18">
+    <circle cx="160" cy="200" r="14"/>
+    <circle cx="880" cy="320" r="10"/>
+    <circle cx="200" cy="820" r="11"/>
+    <circle cx="880" cy="800" r="14"/>
+  </g>
+  <g fill="#ffffff" opacity="0.10" font-family="Georgia, serif" font-weight="700">
+    <text x="100"  y="240" font-size="58">∫</text>
+    <text x="820"  y="260" font-size="50">π</text>
+    <text x="120"  y="860" font-size="60">∑</text>
+    <text x="800"  y="880" font-size="58">√</text>
+  </g>
+
+  <!-- Friendly rounded "ZoB" wordmark with built-in smile -->
+  <!-- We draw ZoB then add eyes + smile underneath for a face-like vibe -->
+
+  <!-- ZoB text (top half) -->
+  <g font-family="-apple-system, SF Pro Rounded, Avenir Next Rounded, Arial Rounded MT Bold, sans-serif"
+     font-weight="900" fill="#ffffff" text-anchor="middle">
+    <text x="512" y="490" font-size="260" letter-spacing="-8">ZoB</text>
+  </g>
+
+  <!-- Face under wordmark -->
+  <!-- Eyes -->
+  <g fill="#ffffff">
+    <ellipse cx="410" cy="640" rx="22" ry="32"/>
+    <ellipse cx="614" cy="640" rx="22" ry="32"/>
+  </g>
+  <!-- Cheek blush -->
+  <ellipse cx="340" cy="710" rx="55" ry="32" fill="url(#cheek)"/>
+  <ellipse cx="684" cy="710" rx="55" ry="32" fill="url(#cheek)"/>
+
+  <!-- Smile -->
+  <path d="M 380 720 Q 512 830 644 720"
+        stroke="#ffffff" stroke-width="28" stroke-linecap="round" fill="none"/>
+
+  <!-- Sparkle accent next to face -->
+  <g fill="#ffffff" opacity="0.95">
+    <path d="M 760 600 l 14 0 l 6 -22 l 6 22 l 14 0 l -12 12 l 6 22 l -14 -12 l -14 12 l 6 -22 z"/>
+  </g>
+</svg>
